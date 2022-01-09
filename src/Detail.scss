@@ -1,0 +1,57 @@
+
+$메인칼라 : #ff0000;
+
+.wow-enter{
+    opacity: 0;
+}
+
+.wow-enter-active{
+    opacity: 1;
+    transition: all 500ms;
+}
+
+
+.red{
+    color : $메인칼라;
+}
+
+@mixin function() {
+    background-color: #eeeeee;
+    padding : 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+} //공통적인부분 함수 생성.
+
+.my-alert{
+    @include function() // 위에 함수를 include 하는 함수
+}
+
+.my-alert2 {
+    @extend .my-alert; // 복사 붙여넣기해서 확장시키는 함수.
+    background-color: #ffe591;
+}
+
+.my-alert p{
+    margin-bottom: 0;
+
+}
+
+// div.container h4{
+//     color: blue;
+// }
+
+// div.container p{
+//     color: green;
+// }
+
+// div.container{
+//     h4{
+//         color: blue;
+//     }
+//     p{
+//         color: green;
+//     }
+// } scss 문법 최신식
+
